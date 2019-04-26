@@ -1,0 +1,12 @@
+c:\users\user2\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.exe.config
+c:\users\user2\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.exe
+c:\users\user2\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.pdb
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.csprojAssemblyReference.cache
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Auth.resources
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Properties.Resources.resources
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Reg.resources
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.csproj.GenerateResource.cache
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.csproj.CoreCompileInputs.cache
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.exe
+c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.pdb
+C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Zakf.resources
