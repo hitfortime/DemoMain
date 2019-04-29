@@ -15,7 +15,8 @@ namespace DemoApp
     public partial class Tkani : Form
     {
         SqlConnection connection = new SqlConnection(Properties.Settings.Default.dbConnectionSettings);
-
+        DataSet ds;
+        SqlDataAdapter sda;
         public Tkani()
         {
             InitializeComponent();
@@ -24,8 +25,8 @@ namespace DemoApp
         private void Tkani_Load(object sender, EventArgs e)
         {
             string query = "Select * from tkani";
-            SqlDataAdapter sda = new SqlDataAdapter(query, connection);
-            DataSet ds = new DataSet();
+            sda = new SqlDataAdapter(query, connection);
+            ds = new DataSet();
             sda.Fill(ds, "tkani");
             dataGridView1.DataSource = ds.Tables["tkani"];
 
@@ -63,6 +64,16 @@ namespace DemoApp
             klad.Show();
             this.Close();
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataSet changes = this.ds.GetChanges();
+            if(changes != null)
+            {
+                int updatesRows = this.sda.Update(changes);
+                this.ds.AcceptChanges();
+            }
         }
     }
 }
