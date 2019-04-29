@@ -16,5 +16,12 @@ namespace DemoApp
         {
             InitializeComponent();
         }
+
+        private void тканиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form tkan = new Tkani();
+            tkan.Show();
+            this.Close();
+        }
     }
 }
