@@ -66,6 +66,7 @@
             this.фурнитураToolStripMenuItem.Name = "фурнитураToolStripMenuItem";
             this.фурнитураToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.фурнитураToolStripMenuItem.Text = "Фурнитура";
+            this.фурнитураToolStripMenuItem.Click += new System.EventHandler(this.фурнитураToolStripMenuItem_Click);
             // 
             // Kladf
             // 

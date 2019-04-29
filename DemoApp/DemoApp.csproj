@@ -58,6 +58,12 @@
     <Compile Include="Auth.Designer.cs">
       <DependentUpon>Auth.cs</DependentUpon>
     </Compile>
+    <Compile Include="furn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="furn.Designer.cs">
+      <DependentUpon>furn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kladf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="Auth.resx">
       <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="furn.resx">
+      <DependentUpon>furn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kladf.resx">
       <DependentUpon>Kladf.cs</DependentUpon>

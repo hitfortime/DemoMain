@@ -12,3 +12,4 @@ c:\users\user2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.pdb
 C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Zakf.resources
 C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Kladf.resources
 C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Tkani.resources
+C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.furn.resources

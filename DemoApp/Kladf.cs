@@ -23,5 +23,12 @@ namespace DemoApp
             tkan.Show();
             this.Close();
         }
+
+        private void фурнитураToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form furn = new furn();
+            furn.Show();
+            this.Close();
+        }
     }
 }
