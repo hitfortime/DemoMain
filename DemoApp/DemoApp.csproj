@@ -58,6 +58,12 @@
     <Compile Include="Auth.Designer.cs">
       <DependentUpon>Auth.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConstructorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstructorForm.Designer.cs">
+      <DependentUpon>ConstructorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="furn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,21 @@
     </Compile>
     <Compile Include="Kladf.Designer.cs">
       <DependentUpon>Kladf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KotovDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KotovDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KotovDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KotovDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KotovDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KotovDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Manf.cs">
       <SubType>Form</SubType>
@@ -90,6 +111,12 @@
     <Compile Include="Tkani.Designer.cs">
       <DependentUpon>Tkani.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zakf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="Auth.resx">
       <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstructorForm.resx">
+      <DependentUpon>ConstructorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="furn.resx">
       <DependentUpon>furn.cs</DependentUpon>
@@ -120,9 +150,45 @@
     <EmbeddedResource Include="Tkani.resx">
       <DependentUpon>Tkani.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Zakf.resx">
       <DependentUpon>Zakf.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="KotovDataSet.xsc">
+      <DependentUpon>KotovDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KotovDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KotovDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KotovDataSet.xss">
+      <DependentUpon>KotovDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KotovDataSet1.xsc">
+      <DependentUpon>KotovDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KotovDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KotovDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KotovDataSet1.xss">
+      <DependentUpon>KotovDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KotovDataSet2.xsc">
+      <DependentUpon>KotovDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KotovDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KotovDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KotovDataSet2.xss">
+      <DependentUpon>KotovDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
