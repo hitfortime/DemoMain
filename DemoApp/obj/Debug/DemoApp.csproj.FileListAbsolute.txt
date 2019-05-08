@@ -15,3 +15,4 @@ C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.Tkani.resources
 C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.furn.resources
 C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.ConstructorForm.resources
 C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.UserForm.resources
+C:\Users\User2\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.AddTkan.resources

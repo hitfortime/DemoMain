@@ -59,15 +59,19 @@ namespace DemoApp
                 case "zakaz":
                     Form user = new UserForm();
                     user.Show();
+                    this.Hide();
                     break;
                 case "admin":
                     adm.Show();
+                    this.Hide();
                     break;
                 case "klad":
                     klad.Show();
+                    this.Hide();
                     break;
                 case "manager":
                     man.Show();
+                    this.Hide();
                     break;
 
                 default:

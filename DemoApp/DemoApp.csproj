@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTkan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTkan.Designer.cs">
+      <DependentUpon>AddTkan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="Zakf.Designer.cs">
       <DependentUpon>Zakf.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddTkan.resx">
+      <DependentUpon>AddTkan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Auth.resx">
       <DependentUpon>Auth.cs</DependentUpon>
     </EmbeddedResource>
