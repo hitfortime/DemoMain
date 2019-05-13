@@ -97,6 +97,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KotovDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="KotovDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KotovDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Manf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +127,12 @@
     </Compile>
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserOrderForm.Designer.cs">
+      <DependentUpon>UserOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Zakf.cs">
       <SubType>Form</SubType>
@@ -162,6 +173,9 @@
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserOrderForm.resx">
+      <DependentUpon>UserOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Zakf.resx">
       <DependentUpon>Zakf.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +211,17 @@
     </None>
     <None Include="KotovDataSet2.xss">
       <DependentUpon>KotovDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KotovDataSet3.xsc">
+      <DependentUpon>KotovDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KotovDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KotovDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KotovDataSet3.xss">
+      <DependentUpon>KotovDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

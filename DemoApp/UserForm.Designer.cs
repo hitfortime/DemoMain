@@ -30,13 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.конструкторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.заказToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.конструкторToolStripMenuItem});
+            this.конструкторToolStripMenuItem,
+            this.заказToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -49,6 +51,13 @@
             this.конструкторToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.конструкторToolStripMenuItem.Text = "Конструктор";
             this.конструкторToolStripMenuItem.Click += new System.EventHandler(this.конструкторToolStripMenuItem_Click);
+            // 
+            // заказToolStripMenuItem
+            // 
+            this.заказToolStripMenuItem.Name = "заказToolStripMenuItem";
+            this.заказToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.заказToolStripMenuItem.Text = "Заказ";
+            this.заказToolStripMenuItem.Click += new System.EventHandler(this.заказToolStripMenuItem_Click);
             // 
             // UserForm
             // 
@@ -70,5 +79,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem конструкторToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem заказToolStripMenuItem;
     }
 }

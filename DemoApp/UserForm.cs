@@ -24,5 +24,12 @@ namespace DemoApp
             constr.Show();
             this.Close();
         }
+
+        private void заказToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form order = new UserOrderForm();
+            order.Show();
+            this.Close();
+        }
     }
 }
