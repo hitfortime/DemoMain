@@ -57,7 +57,7 @@ namespace DemoApp
             switch (role)
             {
                 case "zakaz":
-                    Form user = new UserForm();
+                    Form user = new UserForm(login);
                     user.Show();
                     this.Hide();
                     break;

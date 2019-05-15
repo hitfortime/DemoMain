@@ -12,9 +12,11 @@ namespace DemoApp
 {
     public partial class UserForm : Form
     {
-        public UserForm()
+        string user = "";
+        public UserForm(String u)
         {
             InitializeComponent();
+            this.user = u;
         }
 
         private void конструкторToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace DemoApp
 
         private void заказToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form order = new UserOrderForm();
+            Form order = new UserOrderForm(user);
             order.Show();
             this.Close();
         }

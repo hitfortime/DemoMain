@@ -13,12 +13,32 @@ namespace DemoApp
 {
     public partial class UserOrderForm : Form
     {
+
+        private class Order
+        {
+            public int id { get; set; }
+            public int count { get; set; }
+            public double price { get; set; }
+
+            public Order (int i, int c, double p)
+            {
+                this.id = i;
+                this.count = c;
+                this.price = p;
+            }
+        }
+
+        String user = "";
         SqlConnection con = new SqlConnection(Properties.Settings.Default.dbConnectionSettings);
-        double total;
-        double izdelie_price;
-        public UserOrderForm()
+        double total=0;
+        double izdelie_price=0;
+        List<Order> cart = new List<Order>();
+     
+
+        public UserOrderForm(String u)
         {
             InitializeComponent();
+            this.user = u;
         }
 
         private void UserOrderForm_Load(object sender, EventArgs e)
@@ -26,6 +46,12 @@ namespace DemoApp
             // TODO: This line of code loads data into the 'kotovDataSet3.izdelie' table. You can move, or remove it, as needed.
             this.izdelieTableAdapter.Fill(this.kotovDataSet3.izdelie);
 
+            System.Object[] items2 = new System.Object[101];
+            for (int i = 0; i < 101; i++)
+            {
+                items2[i] = i;
+            }
+            comboBox2.Items.AddRange(items2);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,7 +63,7 @@ namespace DemoApp
                 double item_width = Convert.ToDouble(item.Row.ItemArray[3]);
                 double item_height = Convert.ToDouble(item.Row.ItemArray[4]);
 
-                MessageBox.Show(item_height + ", " + item_width);
+                
                 con.Open();
                 SqlCommand com = new SqlCommand("Select tkani.ID, tkani.Ширина, tkani.Длина, tkani.Цена " +
                     "From tkani_izedelie INNER JOIN tkani ON tkani_izedelie.tkani_id = tkani.ID " +
@@ -55,9 +81,9 @@ namespace DemoApp
                     price = Convert.ToDouble(reader[3] == DBNull.Value ? 0 : reader[3]);
                 }
 
-                MessageBox.Show(price + "," + width + "," + height);
+                
                 izdelie_price = (item_width * item_height * price) / (width * height);
-                total = izdelie_price * Convert.ToInt32(textBox1.Text);
+                total = Math.Round(Math.Abs(izdelie_price * Convert.ToInt32(comboBox2.SelectedIndex)));
                 label5.Text = total.ToString();
 
                 reader.Close();
@@ -72,19 +98,66 @@ namespace DemoApp
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            int parsedValue = 0;
-            if (!int.TryParse(textBox1.Text, out parsedValue))
-            {
-                MessageBox.Show("This is a number only field");
-                return;
-            }
-            total = izdelie_price * parsedValue;
-            label6.Text = total.ToString();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            total = Math.Round(Math.Abs(izdelie_price * Convert.ToInt32(comboBox2.SelectedIndex)));
+            label5.Text = total.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                Random random = new Random();
+                SqlCommand command = new SqlCommand("INSERT INTO [order] ([date], stage, client, manager, price) " +
+                    "VALUES (getdate(),@stage,@client,@manager,@price); SELECT SCOPE_IDENTITY(); ", con);
+                command.Parameters.AddWithValue("@stage", "Новый");
+                command.Parameters.AddWithValue("@client", this.user);
+                command.Parameters.AddWithValue("@manager", "manager"); // from users table
+                command.Parameters.AddWithValue("@price", total); // from users table
+
+                int order = Convert.ToInt32(command.ExecuteScalar());
+
+                SqlCommand command1 = new SqlCommand("INSERT INTO order_izdelie (order_id, izdelie_id,counter) " +
+                   "VALUES (" + order + "," + comboBox1.SelectedValue + ", 1);", con);
+                command1.ExecuteScalar();
+
+                MessageBox.Show("Ваш заказ N" + order + "  забронирован!");
+
+                con.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка !\n");
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cart.Add(new Order(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBox2.SelectedIndex), total));
+
+            StringBuilder s = new StringBuilder();
+            foreach (Order cart_item in cart)
+            {
+
+
+                s.Append("Изделие:" + cart_item.id + ", Кол-во: " + cart_item.count + ", цена:" + cart_item.price);
+                s.Append("\n");
+
+
+            }
+            label7.Text = s.ToString();
         }
     }
 }
